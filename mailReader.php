@@ -191,7 +191,7 @@ class mailReader {
      * @param $mimeType (required) The mime-type of the file
      */
     private function saveFile($filename,$contents,$mimeType = 'unknown'){
-        $filename = preg_replace('/[^a-zA-Z0-9_-]/','_',$filename);
+        $filename = preg_replace('/[^a-zA-Z0-9_-.]/','_',$filename);
 
         $unlocked_and_unique = FALSE;
         while(!$unlocked_and_unique){
